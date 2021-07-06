@@ -1,6 +1,14 @@
 $(() => {
   // Step 3 code herr //
-
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js')
+    .then(reg => {
+      console.log(`SW is registered with scope: ${reg.scope}`)
+    })
+    .catch(err => {
+      console.log('SW Error ', err)
+    })
+  }
 
   const fetchData = () => {
     $('#hello').text(`fetching...`)

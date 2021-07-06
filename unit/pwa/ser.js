@@ -13,10 +13,18 @@ app.get('/hello', (req, res) => {
   setTimeout(()=>res.send(msg) , 500);
 })
 
+
 //  remove here in Step 1 //
-app.listen(port, () => {
-    console.log(`listening on port: ${port}`)
+const https = require('https')
+
+const options = {
+  ca: fs.readFileSync(config.ssl.ca),
+  cert: fs.readFileSync(config.ssl.cert),
+  key: fs.readFileSync(config.ssl.key),
+}
+
+https.createServer(options, app).listen(port,()=>{
+  console.log(`listen on port:${port}`)
 })
-//  remove here in Step 1 //
 
 // Step 1 code here //

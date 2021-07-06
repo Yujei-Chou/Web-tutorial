@@ -1,13 +1,13 @@
 {
   "dependencies": {
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^1.12.4",
     "semantic-ui-offline": "^2.4.1-1",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.0.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.2",
     "sass": "^1.20.1",
     "vue-template-compiler": "^2.6.10"
   }
